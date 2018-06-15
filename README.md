@@ -113,8 +113,8 @@ Phân thành các đoạn sau sử dụng:<code></p>
 <span class="pl-k">var</span> areaSelected<span class="pl-k">:</span> AreaModel<span class="pl-k">!</span>
 <span class="pl-k">var</span> licenseList<span class="pl-k">:</span> [LicenseModel] <span class="pl-k">=</span> []
 <span class="pl-k">var</span> licenseSelected<span class="pl-k">:</span> LicenseModel<span class="pl-k">!</span></pre></div>
+</span>
 <ul>
-
 <li>Cycle function:
 (Các function mặc định, chu kì hoạt động của các view controller)</li>
 </ul>
