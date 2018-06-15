@@ -4,10 +4,10 @@ Cũng như tên biến sử dụng quy tắc con lạc đà, chỉ khác ở ch�
 </li>
 <ul>
 <li>
-<p>Organization Name: Sử dụng "5skay".</p>
+<p>Organization Name: Sử dụng "iOS".</p>
 </li>
 <li><p>Organization identifier:
-Sử dụng "com.5skay".</p></li>
+Sử dụng "com.iOS".</p></li>
 <li>
 <p>Class Prefix:
 Tiền tố mặc định được thêm vào tên các file khi được thêm mới vào project. Tùy dự án, đặt tên file này khác nhau. Ví dụ tên dự án là "ConventionCodeDemo" Class Prefix có thể là "C" hoặc "CC".</p>
@@ -43,39 +43,50 @@ Thư mục chính của project, chứa code của thành viên trong team. Gồ
 </ol>
 <ul>
 <li>
-<p>Models
+<p>Models :
 Chứa các file model</p>
 </li>
 <li>
-<p>Objects
+<p>Objects :
 Chứa các file objects</p>
 </li>
 <li>
-<p>Services
+<p>Services :
 Chứa các file services tổ chức các API</p>
 </li>
 <li>
-<p>Helpers
+<p>Helpers :
 Chứa các file cấu hình như Constants...</p>
 </li>
 <li>
-<p>Extensions
+<p>Extensions :
 Chứa các file extension, mở rộng chức năng của các đối tượng</p>
 </li>
 <li>
-<p>ViewControllers
+<p>ViewControllers :
 Chứa các ViewController của project, mỗi một cụm chức năng nên được tổ chức thành từng thư mục riêng, trong mỗi thư mục này, các màn hình tương ứng với mỗi ViewController cũng phải được tổ chức thành các thư mục riêng rẽ như vậy.</p>
+</li>
+ <li>
+ <p>Views :
+Chứa tất cả các cells và các customview , chia thành từng thư mục con với tên là tên rút gon màn hình chưa cell hoặc view đó.</p>
+</li>
 </li>
 </ul>
 <h1><a id="user-content-một-số-quy-tắc-tổ-chức-code" class="anchor" href="#một-số-quy-tắc-tổ-chức-code" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Một số quy tắc tổ chức code</h1>
 <p>Các file viewController
-Phân thành các đoạn sau sử dụng:<code>// MARK: -</code></p>
+Phân thành các đoạn sau sử dụng:<code></p>
+ <p>
+// MARK: -</code></p>
 <ul>
-<li>Variable and IBOutlet :
+<li>Value :
 (Phần khai báo biến)</li>
 </ul>
+<ul>
+<li>Outlet :
+(Phần khai hiển thị)</li> 
+</ul>
 <p>Tổ chức thành từng đoạn theo từng cụm view, hoặc //từng chức năng. Tạo comment cho từng cụm, mỗi cụm cách nhau bởi một dòng trống, trong mỗi cụm sắp xếp theo thứ tự abc. Ví dụ:</p>
-<div class="highlight highlight-source-swift"><pre><span class="pl-c"><span class="pl-c">//</span> MARK: - Variable and IBOutlet</span>
+<div class="highlight highlight-source-swift"><pre><span class="pl-c"><span class="pl-c">//</span> MARK: - Outlet</span>
 <span class="pl-c"></span>
 <span class="pl-c"><span class="pl-c">
 //</span>Main View</span>
@@ -96,7 +107,8 @@ Phân thành các đoạn sau sử dụng:<code>// MARK: -</code></p>
 <span class="pl-k">@IBOutlet</span> <span class="pl-k">var</span> textViewRegistration<span class="pl-k">:</span> UITextView<span class="pl-k">!</span>
 <span class="pl-c"><span class="pl-c">
 
-//</span> Custom variable</span>
+<div class="highlight highlight-source-swift"><pre><span class="pl-c"><span class="pl-c">//</span> MARK: - Value</span>
+<span class="pl-c"></span>
 <span class="pl-c"></span><span class="pl-k">var</span> areaList<span class="pl-k">:</span> [AreaModel] <span class="pl-k">=</span> []
 <span class="pl-k">var</span> areaSelected<span class="pl-k">:</span> AreaModel<span class="pl-k">!</span>
 <span class="pl-k">var</span> licenseList<span class="pl-k">:</span> [LicenseModel] <span class="pl-k">=</span> []
